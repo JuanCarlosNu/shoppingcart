@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemJSON from '../Items/ItemJSON';
 export default class ListItems extends React.Component {
-	
+	//request pull
 	// This code is meant for deletion
 	deleteProduct(e) {
 		e.preventDefault();
