@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+.line{
+  display: flex;
+  flex-direction: column;
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(32, 32, 32, .2);
+}
+.line_content{
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+.item_single-container{
+    position: relative;
+    display: flex;
+    flex: 3;
+   
+}
+.item_single_image-container{
+    flex-grow: 0;
+    border: 1px solid;
+    background-color: rgba(60, 60, 60, .1);
+    height: min-content;
+
+}
+ .item_single_image_overlay{
+    position: relative;
+    
+}
+.item_single_image_case {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item_single_info-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.data_static {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 12px;
+}
+.product_name {
+    display: block;
+    max-width: 80%;
+    font-size: 16px;
+    line-height: 24px;
+}
+.product_price {
+    display: flex;
+    padding-top: 12px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.data_dynamic{
+   position: relative;
+   display: inline-block;
+}
+.cantidad{
+    display: flex;
+}
+.sDQpsNT{
+    display: flex;
+
+}
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+</head>
+<body>
+    <div class="line">
+        <div class="line_content">
+            <div class="item_single-container">
+                <div class="item_single_image-container">
+                        <div class="item_single_image_overlay">
+                            <div class="item_single_image_case">
+                                <img class="" 
+                                     data-hook="product-thumbnail-media" 
+                                     src="https://static.wixstatic.com/media/22e53e_0ffc1d0e2227489197e51338e7d8c2a7~mv2.jpg/v1/fill/w_125,h_125,al_c,q_85,usm_0.66_1.00_0.01/22e53e_0ffc1d0e2227489197e51338e7d8c2a7~mv2.webp" 
+                                     srcset="https://static.wixstatic.com/media/22e53e_0ffc1d0e2227489197e51338e7d8c2a7~mv2.jpg/v1/fill/w_125,h_125,al_c,q_85,usm_0.66_1.00_0.01/22e53e_0ffc1d0e2227489197e51338e7d8c2a7~mv2.webp 1x,
+                                             https://static.wixstatic.com/media/22e53e_0ffc1d0e2227489197e51338e7d8c2a7~mv2.jpg/v1/fill/w_250,h_250,al_c,q_85,usm_0.66_1.00_0.01/22e53e_0ffc1d0e2227489197e51338e7d8c2a7~mv2.webp 2x,
+                                             https://static.wixstatic.com/media/22e53e_0ffc1d0e2227489197e51338e7d8c2a7~mv2.jpg/v1/fill/w_375,h_375,al_c,q_85,usm_0.66_1.00_0.01/22e53e_0ffc1d0e2227489197e51338e7d8c2a7~mv2.webp 3x"
+                                     alt="Soy un producto"
+                                     aria-hidden="false"
+                                     style="width: 100px; height: 100px;">
+                            </div>
+                        </div>
+                    
+                </div>
+                <div  class="item_single_info-container">
+                    <div class="data_static">
+                        <div class="u3J7hK" class="product_name">
+                            Soy un producto
+                        </div>
+                        <div data-hook="CartItemDataHook.Discounts">
+
+                        </div>
+                        <div class="product_price">
+                            <span >$20,00</span>
+                        </div>
+                    </div>
+                    <div class="data_dynamic">
+                        <div class="cantidad">
+                            
+
+                                <div class="sDQpsNT">
+                                    <button class="sOXozy9 saOr_zC sqD1WJP"
+                                            data-hook="counter-plus-button"
+                                            name="increment">
+                                        <svg viewBox="0 0 24 24" 
+                                             fill="currentColor" 
+                                             width="24"
+                                             height="24" 
+                                             class="sOieAUk">
+
+                                             <path fill-rule="evenodd"
+                                                    d="M13,5 L13,12 L20,12 L20,13 L13,13 L13,20 L12,20 L11.999,13 L5,13 L5,12 L12,12 L12,5 L13,5 Z">
+                                             </path>
+                                        </svg>
+                                    </button>
+                                    <div class="s__40VdRl">
+                                        <div class="sdGTMcq">
+                                            <input aria-label="Elegir cantidad" 
+                                                   aria-live="assertive" 
+                                                   aria-describedby="[object Object]" 
+                                                   type="number" min="1" max="99999" step="1" class="sY43G5n" value="1">
+                                                </div>
+                                            </div>
+                                            <button aria-label="Eliminar un artículo" 
+                                                    class="sOXozy9 o_4BYwP--disabled saOr_zC saQX3Ak" 
+                                                    data-hook="counter-minus-button"
+                                                    name="decrement"
+                                                    disabled="">
+                                                    <svg viewBox="0 0 24 24"
+                                                         fill="currentColor"
+                                                         width="24"
+                                                         height="24"
+                                                         class="sOieAUk">
+                                                         <path fill-rule="evenodd"
+                                                          d="M20,12 L20,13 L5,13 L5,12 L20,12 Z">
+                                                        </path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+             </div>
+             <div class="WuGjIe" className="item_total">
+                            <div class="apzZQq" 
+                                 data-hook="CartItemDataHook.totalPrice" 
+                                 data-wix-item-total-price="CartItemDataHook.totalPrice">
+                                 $20,00
+                                </div>
+                                <button class="gMURpB" type="button" 
+                                        aria-label="retirar Soy un producto del carrito"
+                                         data-hook="CartItemDataHook.remove">
+                                         <svg xmlns="http://www.w3.org/2000/svg" 
+                                              width="12" height="12" fill="currentColor">
+                                              <path fill-rule="evenodd" 
+                                                            d="M11.077 0L12 .923 6.923 6 12 11.077l-.923.923L6 6.923.923 12 0 11.077 5.076 6 0 .923.923 0 6 5.077 11.077 0z">
+                                                </path>
+                                          </svg>
+                                </button>
+             </div>
+        </div>
+    </div>
+</body>
+</html>

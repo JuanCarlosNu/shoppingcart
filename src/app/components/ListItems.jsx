@@ -16,9 +16,9 @@ export default class ListItems extends React.Component {
 			// displaying available products and it
 			// is having delete action
 			<li>
-				<table border="3">
-					<tbody>
-						<tr>
+			<div className="line">
+					<div className="line_content">
+						
 							<td width="100px" id="one">
                                 <span className='image'>
                                <img src={product.product_imageURl} ></img>
@@ -41,9 +41,8 @@ export default class ListItems extends React.Component {
 								onClick={this.deleteProduct.bind(this)}>
 								Delete </button>
 							</td>
-						</tr>
-					</tbody>
-				</table>
+							</div>
+						</div>					
 			</li>
 		);
 	}
