@@ -5,21 +5,21 @@ import assign from 'object-assign';
 const ProductStore = assign({}, EventEmitter.prototype, {
 	items: {
 		products: [
-			{
+			{ 	
 				productId: 0, productName: 'Samsung',
 				productPrice: 10000,
                  productQuantity: 2, 
-                 product_imageURl: 'https://i.pcmag.com/imagery/reviews/03POP0TjDjuXonJXI16Omn2-1..v1663720055.jpg',
+                 product_imageURl: 'https://images.samsung.com/is/image/samsung/p6pim/ar/sm-a135mzkkaro/gallery/ar-galaxy-a13-sm-a135-sm-a135mzkkaro-532207027?$650_519_PNG',
 			},
 			{
 				productId: 1, productName: 'Motorola',
 				productPrice: 7000, productQuantity: 3,
-                product_imageURl: './components/images/phone.jpg',
+                product_imageURl: 'https://www.91-cdn.com/hub/wp-content/uploads/2022/12/Motorola-Edge-40-Pro-1.jpg?tr=q-100',
 			},
 			{
 				productId: 2, productName: 'Redmi',
 				productPrice: 8000, productQuantity: 4,
-                product_imageURl: './components/images/phone.jpg',
+                product_imageURl: 'https://http2.mlstatic.com/D_Q_NP_743404-MLA48592292176_122021-O.webp',
 			},
 		]
 	},
