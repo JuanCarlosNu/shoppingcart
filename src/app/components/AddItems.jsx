@@ -1,68 +1,72 @@
-import React from 'react';
-import ItemJSON from '../Items/ItemJSON';
+import React, { useState } from 'react';
 
-export default class AddItems extends React.Component {
-	
-	//will pick the added product and added
+export default function AddItems({ addProduct }) {
+  const [newProductName, setNewProductName] = useState('');
+  const [newPrice, setNewPrice] = useState('');
+  const [newQuantity, setNewQuantity] = useState('');
 
-	addItems() {
-		const newProduct_URL  = this.refs.product_imageURl.value;
-		const newProductName = this.refs.product.value;
-		const newPrice = this.refs.price.value;
-		const newQuantity = this.refs.quantity.value;
+  const addItems = () => {
+    if (newProductName && newPrice && newQuantity) {
+      addProduct({
+        productId: Date.now(), // Generate a unique ID (you can use a better method)
+        productName: newProductName,
+        productPrice: parseFloat(newPrice),
+        productQuantity: parseInt(newQuantity),
+      });
+      // Reset input fields
+      setNewProductName('');
+      setNewPrice('');
+      setNewQuantity('');
+    }
+  };
 
-		if (newProductName) {
-			ItemJSON.addNewProducts({
-				product_imageURl: newProduct_URL,
-				productName: newProductName,
-				productPrice: newPrice,
-				productQuantity: newQuantity,
-			});
-			ItemJSON.emitChange();
-			this.refs.product_imageURl.value = '';
-			this.refs.product.value = '';
-			this.refs.price.value = '';
-			this.refs.quantity.value = '';
-		}
-	}
-
-	render() {
-		return (
-			<center>
-				<div className="add-todo">
-					<table >
-						<thead>	
-							<tr>
-							   <th>Image url</th>
-								<th>Product Name</th>
-								<th>Price</th>
-								<th>Quantity</th>
-								<th>Action</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-							<td><input type="text"
-									placeholder="Product URL"
-									ref="product_imageURl" /></td>
-								<td><input type="text"
-									placeholder="Add Product Name"
-									ref="product" /></td>
-								<td><input type="text"
-									placeholder="Add Price"
-									ref="price" /></td>
-								<td><input type="text"
-									placeholder="Add Quantity"
-									ref="quantity" /></td>
-								<td><button className="add-button"
-									onClick={this.addItems.bind(this)}>
-									Add
-								</button></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</center>
-		);
-	}
+  return (
+    <center>
+      <div className="add-todo">
+        <table>
+          <thead>
+            <tr>
+              <th>Product Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Add Product Name"
+                  value={newProductName}
+                  onChange={(e) => setNewProductName(e.target.value)}
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Add Price"
+                  value={newPrice}
+                  onChange={(e) => setNewPrice(e.target.value)}
+                />
+              </td>
+              <td>
+                <input
+                  type="text"
+                  placeholder="Add Quantity"
+                  value={newQuantity}
+                  onChange={(e) => setNewQuantity(e.target.value)}
+                />
+              </td>
+              <td>
+                <button className="add-button" onClick={addItems}>
+                  Add
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </center>
+  );
 }
